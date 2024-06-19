@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Song</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a Song</h1>
+    <form id="addSongForm">
+        <label for="songName">Song Name:</label>
+        <input type="text" id="songName" name="songName" required>
+
+        <label for="songThumbnail">Song Thumbnail:</label>
+        <input type="file" id="songThumbnail" name="songThumbnail" accept="image/*" required>
+
+        <label for="songAudio">Song Audio:</label>
+        <input type="file" id="songAudio" name="songAudio" accept="audio/*" required>
+
+        <button type="submit">Add Song</button>
+    </form>
+
+    <script>
+        const addSongForm = document.getElementById('addSongForm');
+        const songNameInput = document.getElementById('songName');
+        const songThumbnailInput = document.getElementById('songThumbnail');
+        const songAudioInput = document.getElementById('songAudio');
+
+        addSongForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const songName = songNameInput.value;
+            const songThumbnailFile = songThumbnailInput.files[0];
+            const songAudioFile = songAudioInput.files[0];
+
+            // You can perform additional validations or file processing here
+            // For example, you can check the file types, sizes, etc.
+
+            // Once you have validated the data, you can send it to the server
+            // using an AJAX request or a form submission
+
+            // For demonstration purposes, let's log the data to the console
+            console.log('Song Name:', songName);
+            console.log('Song Thumbnail:', songThumbnailFile);
+            console.log('Song Audio:', songAudioFile);
+
+            // Reset the form after successful submission
+            addSongForm.reset();
+        });
+    </script>
+</body>
+</html>
