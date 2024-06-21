@@ -10,18 +10,18 @@
 <body>
     <nav>
         <ul>
-            <li class="brand"><img src="logo.png" alt="Spotify"> Spotify</li>
+            <li class="brand"><img src="logo.png" alt="Spotify"> Sangeet</li>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="add.html">Add Song</a></li>
         </ul>
     </nav>
 
-    <div class="container">
+    <div class="container Add">
         <h1>Add a New Song</h1>
         <form id="addSongForm">
             <label for="songName">Song Name:</label>
-            <input type="text" id="songName" name="songName" required>
+            <input type="text" id="songName" name="songName" placeholder="Enter the Song name" required>
             
             <label for="songThumbnail">Song Thumbnail:</label>
             <input type="file" id="songThumbnail" name="songThumbnail" accept="image/*" required>
@@ -29,7 +29,7 @@
             <label for="songFile">Song File:</label>
             <input type="file" id="songFile" name="songFile" accept="audio/*" required>
             
-            <button type="submit">Add Song</button>
+            <button type="submit" class="submit">Add Song</button>
         </form>
     </div>
 

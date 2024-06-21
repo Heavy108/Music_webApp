@@ -36,6 +36,10 @@ nav ul li{
     font-weight: bolder;
     font-size: 1.3rem;
 }
+a{
+    text-decoration: none;
+    color: white;
+}
 
 .container{
     min-height: 72vh;
@@ -129,8 +133,35 @@ nav ul li{
     margin-left:8rem ;
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    margin-top: 1rem;
 }
-
+.Add{
+    background: url("/covers/add.jpg");
+   display: flex;
+   flex-direction: column; 
+}
+#addSongForm{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+input{
+    margin: 1rem;
+    padding:0.6rem 1rem 0.6rem 1rem ;
+    border-radius: 0.8rem;
+    width: 28rem;
+}
+label{
+    margin: 0rem 1rem ;
+}
+.submit{
+    margin: 1rem;
+    width: fit-content;
+    background-color: green;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    border-radius: 1rem;
+    font-weight: 700;
+}
 @media only screen and (max-width: 1100px) {
     body {
       background-color: red;
